@@ -110,14 +110,14 @@ is deliberately no shared module, so each script is self-contained):
 
 | Figure | Script | Section | Shows |
 |---|---|---|---|
-| `rest_position` | `rest_position.py` | 2.1 Arrow rest | Cross-section down the shaft (riser on the right, archer's view). (a) correct: plunger on the shaft centre, rest arm tip 3/4 of the way from centreline to outer edge; (b) arm too far out; (c) too far in; (d) rest too high; (e) too low. Top panel + 2x2 grid. Dashed plunger axis and dotted shaft centreline/outer edge on all panels. |
-| `limb_alignment` | `limb_alignment.py` | 2.x Limb alignment | From behind the bow, riser face-on with sight window, limb bolts and stabiliser bushing; string tip-to-tip; dashed limb centrelines. (a) upper limb out; (b) correct; (c) both limbs out the same way. Widths exaggerated x2 as well as the offsets. |
-| `tiller` | `tiller.py` | 2.x Tiller | Side profile, string on the right. D_top and D_bottom dimensioned from pocket edge to string; T = D_top - D_bottom under the strip. (a) T<0; (b) 0<=T<=6 mm; (c) T>6 mm. |
-| `bracing_height` | `bracing_height.py` | 2.6 Bracing height | Same bow as tiller, symmetric. Button end-on; B dimensioned button-to-string; nocking points; BH gauge on (b). (a) too low; (b) in range; (c) too high. |
-| `nocking_point` | `nocking_point.py` | 2.x Nocking point | Side view cropped to the sight window; arrow nocked on the rest; dashed "square" line through the top of the rest arm; h_N dimensioned to the underside of the nock. (a) too low; (b) in range; (c) too high. |
-| `centreshot` | `centreshot.py` | 2.3 Centreshot | From behind, slightly above; string vertical; shaft as a tapering wedge; plunger visible. (a) too far out; (b) correct (3/4 of the point visible left of the string); (c) too far in. |
-| `bare_shaft` | `bare_shaft.py` | 3 Tuning | Target face, arrows nock-end-on. (a) good: bare shafts slightly low-left of fletched; (b) bare left: arrows too stiff or button too firm; (c) bare right: weak / soft; (d) bare low: nocking point too high; (e) bare high: nocking point too low. Top panel + 2x2 grid. |
-| `walkback` | `walkback.py` | 3 Tuning | Tall target face, aiming mark near the top, plumb line; one arrow per distance (10-30 m in 5 m steps, then 40 m) walking down. (a) drifting left: slightly stiff, soften button; (b) straight; (c) drifting right: slightly weak, stiffen button. Button *tension* only; centreshot is not touched here. |
+| `rest_position` | `rest_position.py` | 2.6 Arrow rest | Cross-section down the shaft (riser on the right, archer's view). (a) correct: plunger on the shaft centre, rest arm tip 3/4 of the way from centreline to outer edge; (b) arm too far out; (c) too far in; (d) rest too high; (e) too low. Top panel + 2x2 grid. Dashed plunger axis and dotted shaft centreline/outer edge on all panels. |
+| `limb_alignment` | `limb_alignment.py` | 2.1 Limb alignment | From behind the bow, riser face-on with sight window, limb bolts and stabiliser bushing; string tip-to-tip; dashed limb centrelines. (a) upper limb out; (b) correct; (c) both limbs out the same way. Widths exaggerated x2 as well as the offsets. |
+| `tiller` | `tiller.py` | 2.3 Tiller | Side profile, string on the right. D_top and D_bottom dimensioned from pocket edge to string; T = D_top - D_bottom under the strip. (a) T<0; (b) 0<=T<=6 mm; (c) T>6 mm. |
+| `bracing_height` | `bracing_height.py` | 2.4 Bracing height | Same bow as tiller, symmetric. Button end-on; B dimensioned button-to-string; nocking points; BH gauge on (b). (a) too low; (b) in range; (c) too high. |
+| `nocking_point` | `nocking_point.py` | 2.7 Nocking point | Side view cropped to the sight window; arrow nocked on the rest; dashed "square" line through the top of the rest arm; h_N dimensioned to the underside of the nock. (a) too low; (b) in range; (c) too high. |
+| `centreshot` | `centreshot.py` | 2.8 Centreshot | From behind, slightly above; string vertical; shaft as a tapering wedge; plunger visible. (a) too far out; (b) correct (3/4 of the point visible left of the string); (c) too far in. |
+| `bare_shaft` | `bare_shaft.py` | 3.1 Bare shaft | Target face, arrows nock-end-on. (a) good: bare shafts slightly low-left of fletched; (b) bare left: arrows too stiff or button too firm; (c) bare right: weak / soft; (d) bare low: nocking point too high; (e) bare high: nocking point too low. Top panel + 2x2 grid. |
+| `walkback` | `walkback.py` | 3.2 Walk-back | Tall target face, aiming mark near the top, plumb line; one arrow per distance (10-30 m in 5 m steps, then 40 m) walking down. (a) drifting left: slightly stiff, soften button; (b) straight; (c) drifting right: slightly weak, stiffen button. Button *tension* only; centreshot is not touched here. |
 
 The three side-profile figures (`tiller`, `bracing_height`, `nocking_point`)
 draw the same riser (grip with shelf, throat and heel, button at y=4 between
@@ -126,24 +126,31 @@ one it must change in all three.
 
 ## State of the document
 
-The `.tex` file is the author's draft. As of 24 Oct 2026 the figures above
-are finished and captions plus paragraph text for each have been drafted in
-conversation; the author will paste and adapt them. Things known to need
-doing in the `.tex`:
+The `.tex` file is the author's draft. As of 24 Oct 2026 the figures are
+finished and placed, and Section 2 follows the setup procedure:
 
-* Section 2 order should follow the setup *procedure*, not the topic list:
-  limb alignment, tiller, bracing height, nocking point, arrow rest,
-  centreshot, arrows. Numbering in the table above refers to the old draft.
-* Sections 2.1 (Arrow rest), 2.3 (Centreshot), 2.4 (Tiller), 2.5 (untitled,
-  empty), 3 (Tuning) and 4 (Maintenance) have no body text yet or only
-  bullets; drafts exist for all but 2.1 and 2.5.
-* Existing bullet lists (bracing height, nocking point, sight marks, string
-  waxing) are being converted to prose.
+1. Limb alignment, 2. Draw weight, 3. Tiller, 4. Bracing height, 5. Arrows,
+6. Arrow rest, 7. Nocking point, 8. Centreshot, 9. Pressure button tension.
+
+Arrows come straight after bracing height because everything from there on
+depends on the shaft diameter; the rest comes before the nocking point
+because the nocking point is measured from the rest. Draw weight, pressure
+button tension, the clicker sentence under Arrows and the clicker check in
+Maintenance were drafted by Claude on 24 Oct 2026 and await the author's
+edit. Things known to need doing in the `.tex`:
+
+* Section 1.3 (Reading list) is empty.
+* Section 4 (Maintenance): sight marks and string waxing are still bullet
+  lists to be converted to prose; the author may want more topics.
+* The Tiller paragraph opens by explaining that tiller is set with the
+  limb bolts, which now partly duplicates the Draw weight section before
+  it.
 * `graphicx` is loaded with `\graphicspath{{figures/}}`, so figures are
   included as `\includegraphics[width=...]{<name>.pdf}`; labels are
   `fig:rest-position`, `fig:limb-alignment`, `fig:tiller`,
   `fig:bracing-height`, `fig:nocking-point`, `fig:centreshot`,
-  `fig:bare-shaft`, `fig:walkback`.
+  `fig:bare-shaft`, `fig:walkback`. The Tuning section carries
+  `\label{sec:tuning}`.
 
 ## Conventions used in the text
 
