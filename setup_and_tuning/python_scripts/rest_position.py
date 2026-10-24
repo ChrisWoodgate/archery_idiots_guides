@@ -90,27 +90,28 @@ def draw_panel(ax, label, arm_end_frac=0.75, dy=0.0, annotate=False, ok=False):
                     ha="center", va="top", arrowprops=arr)
 
 
-# Layout: one panel on top (centred), 2x2 grid below, all at the same scale
-W_IN = 5.2
+# Layout: a row of three (a, b, c) above a centred row of two (d, e), all at
+# the same scale. Wider than tall so the figure shares a page with its text.
 PANEL_W_IN = 2.25
 PANEL_H_IN = PANEL_W_IN * (YLIM[1] - YLIM[0]) / (XLIM[1] - XLIM[0])
 GAPX_IN, GAPY_IN = 0.3, 0.45
-H_IN = 3 * PANEL_H_IN + 2 * GAPY_IN + 0.35
+W_IN = 3 * PANEL_W_IN + 2 * GAPX_IN + 0.2
+H_IN = 2 * PANEL_H_IN + GAPY_IN + 0.35
 fig = plt.figure(figsize=(W_IN, H_IN))
 PW, PH = PANEL_W_IN / W_IN, PANEL_H_IN / H_IN
 GAPX, GAPY = GAPX_IN / W_IN, GAPY_IN / H_IN
 
-x_left = 0.5 - PW - GAPX / 2
-x_right = 0.5 + GAPX / 2
+x_mid = 0.5 - PW / 2                                   # centre column
+x_left3, x_right3 = x_mid - GAPX - PW, x_mid + GAPX + PW   # outer columns, row of three
+x_left2, x_right2 = 0.5 - PW - GAPX / 2, 0.5 + GAPX / 2    # row of two, centred
 y_top = 1 - 0.02 - PH
-y_mid = y_top - GAPY - PH
-y_bot = y_mid - GAPY - PH
+y_bot = y_top - GAPY - PH
 
-ax_a = fig.add_axes([0.5 - PW / 2, y_top, PW, PH])
-ax_b = fig.add_axes([x_left, y_mid, PW, PH])
-ax_c = fig.add_axes([x_right, y_mid, PW, PH])
-ax_d = fig.add_axes([x_left, y_bot, PW, PH])
-ax_e = fig.add_axes([x_right, y_bot, PW, PH])
+ax_a = fig.add_axes([x_left3, y_top, PW, PH])
+ax_b = fig.add_axes([x_mid, y_top, PW, PH])
+ax_c = fig.add_axes([x_right3, y_top, PW, PH])
+ax_d = fig.add_axes([x_left2, y_bot, PW, PH])
+ax_e = fig.add_axes([x_right2, y_bot, PW, PH])
 
 draw_panel(ax_a, "a", arm_end_frac=0.75, dy=0.0, annotate=True, ok=True)   # correct
 draw_panel(ax_b, "b", arm_end_frac=1.8)                          # too far out
