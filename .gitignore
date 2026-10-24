@@ -12,3 +12,6 @@
 
 # Python
 __pycache__/
+
+# Built handouts
+setup_and_tuning/setup_and_tuning.pdf
