@@ -140,12 +140,9 @@ numbered subsections (sight marks, clicker, string waxing, string check,
 screws and bolts, arrows) and an unnumbered Setup record sheet closes the
 document on its own page.
 
-Passages drafted by Claude on 24 Oct 2026 that await the author's rework:
-the Section 2, 3 and 4 lead-in paragraphs; Draw weight; the arrow rest
-procedure paragraph; the arrow length / nock fit paragraph and the clicker
-paragraph under Arrows; Pressure button tension; Checking your clicker,
-Checking your string, Checking screws and bolts, Checking your arrows; the
-Licence section; the Setup record sheet. Everything else is the author's.
+The author proof-read and reworked the whole draft on 24 Oct 2026 (commit
+"Edits to first draft"), so every passage is now the author's; treat all
+prose as owned. Nothing is known to be outstanding in the text.
 
 Technical notes:
 
@@ -172,6 +169,8 @@ Technical notes:
 * The definitions in 1.1 are an `enumitem` description list with italic
   labels; itemize labels overhung the margin.
 * Footer: licence line left, page number right.
+* The author's name is "Christopher D. Woodgate" everywhere it appears
+  (header, PDF metadata, footer, Licence).
 
 ## Conventions used in the text
 
