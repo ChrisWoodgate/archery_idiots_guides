@@ -17,6 +17,10 @@
 \usepackage[section]{placeins}
 \let\plainsubsection\subsection
 \renewcommand{\subsection}{\FloatBarrier\plainsubsection}
+% Let a large figure share a page with text rather than take a float page
+% of its own (the defaults are 0.7 and 0.5).
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\floatpagefraction}{0.8}
 \setlength{\headheight}{15pt} 
 \pagestyle{fancy}
 \fancyhf{}
@@ -63,7 +67,7 @@ The steps below are in the order in which they should be carried out, because ea
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{limb_alignment.pdf}
+  \includegraphics[width=0.6\linewidth]{limb_alignment.pdf}
   \caption{Limb alignment, viewed from behind the bow. The dashed line along each limb is the limb's centreline. (a)~Upper limb out of alignment: the string runs off-centre along the limb and misses the lower limb bolt and the stabiliser bushing. (b)~Correct: the string passes through both limb bolts and the stabiliser bushing and bisects both limbs along their length.  (c)~Both limbs out of alignment in the same direction: the string misses the bushing and both bolts. Note that this is a schematic only -- the widths of the riser and limbs, and the misalignment, are exaggerated.}
   \label{fig:limb-alignment}
 \end{figure}
@@ -74,20 +78,21 @@ Before adjusting anything else, it should be checked that the limbs are correctl
 The limb bolts set the draw weight of the bow: winding both bolts in increases it and winding them out reduces it, and most risers allow a range of a few pounds either way. Settle on your draw weight before you touch anything else, because the same bolts set the tiller and move the bracing height, so any later change of weight means re-checking everything that follows. Choose a weight you can draw and hold with good form at the end of a long session, not one you can manage for a dozen arrows when fresh; if in doubt, go lighter. Keep the bolts within the range the manufacturer allows (there is usually a stated maximum number of turns out from fully in), wind them in equal amounts so that the tiller is not disturbed, and note down how many turns out each bolt is. The weight printed on the limbs is nominal, quoted at a 28\,in draw on a 25\,in riser; what matters for choosing arrows is the weight \emph{on your fingers} at \emph{your} draw length, which can differ by several pounds. Measure it with a bow scale, or ask a coach to.
 
 \subsection{Tiller}
-Tiller is adjusted with the same limb bolts you have just used to set your draw weight, which is why it comes next; once it is set, the bolts are left alone for everything that follows. Tiller describes the balance in `pull' between the upper and lower limbs of the bow. It is measured with a bracing height gauge as the perpendicular distance from the string to the point where each limb meets the riser, taken at the top and the bottom (Fig.~\ref{fig:tiller}); the tiller is the top measurement minus the bottom. Because the arrow sits above the centre of the bow and the fingers pull unevenly on the string, most archers shoot best with a small amount of \emph{positive} tiller, meaning the top distance is slightly larger. Anywhere between 0 and 6\,mm of positive tiller is reasonable, and around 3\,mm is a sensible starting point. Winding a limb bolt \emph{in} effectively increases the `draw weight' of that limb and pulls its end of the string closer to the riser, so to increase the tiller you wind the top bolt out a little or the bottom bolt in a little. (To decrease the tiller, do the opposite.) Make small adjustments, keeping the two bolts within a quarter-turn or so of each other unless you have a reason not to, and once the tiller is in range, note it down and leave the bolts alone. If you later want to change your draw weight, wind both bolts by the same amount so the tiller is kept the same.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{tiller.pdf}
+  \includegraphics[width=0.7\linewidth]{tiller.pdf}
   \caption{Tiller on a recurve bow, shown via a side profile of a strung bow.  $D_\mathrm{top}$ and $D_\mathrm{bottom}$ are the perpendicular distances from the string to the point where each limb meets the riser, and the tiller is their difference, $T = D_\mathrm{top} - D_\mathrm{bottom}$. (a)~Negative tiller: the lower limb sits further from the string than the upper. (b)~Correct: between 0 and 6\,mm of positive tiller. (c)~Too much positive tiller. The asymmetry is exaggerated several-fold for clarity; a real tiller difference is a few millimetres and cannot easily be seen by eye.}
   \label{fig:tiller}
 \end{figure}
+
+Tiller is adjusted with the same limb bolts you have just used to set your draw weight, which is why it comes next; once it is set, the bolts are left alone for everything that follows. Tiller describes the balance in `pull' between the upper and lower limbs of the bow. It is measured with a bracing height gauge as the perpendicular distance from the string to the point where each limb meets the riser, taken at the top and the bottom (Fig.~\ref{fig:tiller}); the tiller is the top measurement minus the bottom. Because the arrow sits above the centre of the bow and the fingers pull unevenly on the string, most archers shoot best with a small amount of \emph{positive} tiller, meaning the top distance is slightly larger. Anywhere between 0 and 6\,mm of positive tiller is reasonable, and around 3\,mm is a sensible starting point. Winding a limb bolt \emph{in} effectively increases the `draw weight' of that limb and pulls its end of the string closer to the riser, so to increase the tiller you wind the top bolt out a little or the bottom bolt in a little. (To decrease the tiller, do the opposite.) Make small adjustments, keeping the two bolts within a quarter-turn or so of each other unless you have a reason not to, and once the tiller is in range, note it down and leave the bolts alone. If you later want to change your draw weight, wind both bolts by the same amount so the tiller is kept the same.
 
 \subsection{Bracing height}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{bracing_height.pdf}
+  \includegraphics[width=0.8\linewidth]{bracing_height.pdf}
   \caption{Bracing height, $B$: the perpendicular distance from the string to the pressure button, measured with a bracing-height gauge clipped to the string as shown in~(b). (a)~Too low: the string sits close to the riser.  (b)~In range. (c)~Too high: the string sits far from the riser. What counts as ``in range'' depends on bow length (see text). The differences are exaggerated roughly tenfold; a bracing height that is a centimetre out does not look obviously wrong, which is why it must be measured rather than judged by eye.}
   \label{fig:bracing-height}
 \end{figure}
@@ -108,7 +113,7 @@ To set it, nock an arrow and look at the bow from behind with the string towards
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\linewidth]{rest_position.pdf}
+  \includegraphics[width=\linewidth]{rest_position.pdf}
   \caption{Arrow rest position relative to the shaft and plunger button, viewed in cross-section from the nock end looking towards the target (right-handed bow; riser to the right of the arrow). Dashed line: plunger axis. Dotted lines: centreline and outermost extent of the shaft. (a)~Correct: the plunger pushes on the centre of the shaft, and the rest arm extends past the shaft's centreline but stops short of its outer edge. (b)~Rest arm too far out: the arm protrudes beyond the shaft. (c)~Rest arm too far in: the arm stops short of the centreline, so the arrow is barely supported and will tend to fall off during the draw. (d)~Rest too high: the plunger contacts the shaft below centre. (e)~Rest too low: the plunger contacts the shaft above centre.}
   \label{fig:rest-position}
 \end{figure}
@@ -146,7 +151,7 @@ Tuning, in the sense of Section~\ref{sec:when}, starts only once everything in S
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\linewidth]{bare_shaft.pdf}
+  \includegraphics[width=0.9\linewidth]{bare_shaft.pdf}
   \caption{Bare-shaft tuning for a right-handed archer, viewed from the shooting line. Each panel shows a group of three fletched arrows and two bare shafts on the target. (a)~A good tune: the bare shafts land close to the fletched group, slightly low and left of it. (b)~Bare shafts to the left: the arrows are too stiff, or the pressure button is too firm. (c)~Bare shafts to the right: the arrows are too weak, or the button is too soft. (d)~Bare shafts low: the nocking point is too high. (e)~Bare shafts high: the nocking point is too low. For a left-handed archer, (b) and (c) are mirrored.}
 \label{fig:bare-shaft}
 \end{figure}
