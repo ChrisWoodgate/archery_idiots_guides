@@ -11,6 +11,11 @@
 }
 \usepackage{graphicx}
 \graphicspath{{figures/}}
+% Keep each figure within the subsection that refers to it: a float barrier
+% at every \section (placeins option) and every \subsection (patch below).
+\usepackage[section]{placeins}
+\let\plainsubsection\subsection
+\renewcommand{\subsection}{\FloatBarrier\plainsubsection}
 \setlength{\headheight}{15pt} 
 \pagestyle{fancy}
 \fancyhf{}
