@@ -1,0 +1,14 @@
+# Figure previews only; the PDFs are what the document uses
+**/figures/*.png
+
+# LaTeX build products
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+
+# Python
+__pycache__/
