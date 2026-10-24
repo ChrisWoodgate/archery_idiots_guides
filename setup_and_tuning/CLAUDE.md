@@ -19,7 +19,7 @@ Critical, polite feedback is welcome; flattery is not.
 ## Repository layout
 
 ```
-idiots_guides/
+idiots_guides/                 repository root (README.md, .gitignore)
   setup_and_tuning/            this guide
     setup_and_tuning.tex       the handout (single file, pdflatex)
     CLAUDE.md                  this file
@@ -139,11 +139,8 @@ doing in the `.tex`:
   bullets; drafts exist for all but 2.1 and 2.5.
 * Existing bullet lists (bracing height, nocking point, sight marks, string
   waxing) are being converted to prose.
-* Typos in the draft: "lenghtened" (1.2); "the your bow" (1.2); "is (in the
-  grand scheme of things) will cost" (1.2); "Set up" vs "Setup" vs "set up"
-  is inconsistent in 1.1/1.2.
-* `\usepackage{graphicx}` is needed; figures are included with
-  `\includegraphics[width=...]{figures/<name>.pdf}`; labels are
+* `graphicx` is loaded with `\graphicspath{{figures/}}`, so figures are
+  included as `\includegraphics[width=...]{<name>.pdf}`; labels are
   `fig:rest-position`, `fig:limb-alignment`, `fig:tiller`,
   `fig:bracing-height`, `fig:nocking-point`, `fig:centreshot`,
   `fig:bare-shaft`, `fig:walkback`.
