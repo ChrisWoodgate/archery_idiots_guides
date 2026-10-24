@@ -12,8 +12,8 @@ should get their bow into range and go back to practising.
 
 The author retains authorial control. Do not rewrite prose unless asked;
 proof-read and flag issues, suggest alternatives, and make the specific edits
-requested. Prose is in paragraphs, not bullet points (the original draft used
-bullets; the author is converting them). British spelling throughout.
+requested. Prose is in paragraphs, not bullet points (the only remaining list is
+the three definitions in Section 1.1). British spelling throughout.
 Critical, polite feedback is welcome; flattery is not.
 
 ## Repository layout
@@ -140,11 +140,8 @@ Maintenance were drafted by Claude on 24 Oct 2026 and await the author's
 edit. Things known to need doing in the `.tex`:
 
 * Section 1.3 (Reading list) is empty.
-* Section 4 (Maintenance): sight marks and string waxing are still bullet
-  lists to be converted to prose; the author may want more topics.
-* The Tiller paragraph opens by explaining that tiller is set with the
-  limb bolts, which now partly duplicates the Draw weight section before
-  it.
+* Section 4 (Maintenance) has three short topics (sight marks, clicker,
+  string waxing), all prose; the author may want more.
 * `graphicx` is loaded with `\graphicspath{{figures/}}`, so figures are
   included as `\includegraphics[width=...]{<name>.pdf}`; labels are
   `fig:rest-position`, `fig:limb-alignment`, `fig:tiller`,
