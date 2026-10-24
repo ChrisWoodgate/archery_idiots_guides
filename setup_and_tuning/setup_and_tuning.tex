@@ -11,6 +11,7 @@
 }
 \usepackage{graphicx}
 \usepackage{enumitem}
+\newlength{\deflabelwidth}
 \graphicspath{{figures/}}
 % Keep each figure within the subsection that refers to it: a float barrier
 % at every \section (placeins option) and every \subsection (patch below).
@@ -42,7 +43,10 @@ This is a non-exhaustive handout covering the basics of recurve bow setup, tunin
 
 \subsection{Setup, tuning, maintenance: What's the difference?}
 I view bow setup, bow tuning, and bow maintenance as three separate things:
-\begin{description}[font=\normalfont\itshape]
+% Two aligned columns: labels right-aligned to a column as wide as the
+% widest label, body text left-aligned with a hanging indent.
+\settowidth{\deflabelwidth}{\itshape Maintenance:}
+\begin{description}[font=\normalfont\itshape, align=right, labelwidth=\deflabelwidth, labelsep=1em, leftmargin=!]
 \item[Setup:] Bringing the adjustable parameters of your equipment to within the recommended ranges of the manufacturer(s).
 \item[Tuning:] Making small adjustments to the adjustable parameters of your equipment, within the recommended ranges, to improve the bow's efficiency and the accuracy and consistency of your shooting.
 \item[Maintenance:] Tasks that do not involve the adjustment of any parameters but help to prolong the life of your equipment and/or improve its consistency over time.
