@@ -160,6 +160,9 @@ Technical notes:
   author, subject and keywords (the licence is named in the keywords).
 * Inches are written `66\,in`; a thin space before every unit.
 * Headings are sentence case.
+* `placeins` puts a float barrier at every section and subsection (the
+  `\subsection` macro is patched in the preamble), so figures stay in
+  their subsection. Do not add explicit `\FloatBarrier`s.
 
 ## Conventions used in the text
 
