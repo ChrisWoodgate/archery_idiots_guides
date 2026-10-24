@@ -92,26 +92,27 @@ def draw_panel(ax, label, bare_offset, annotate=False, ok=False, verdict=""):
                     bbox=dict(fc="white", ec="none", pad=1.0))
 
 
-# Layout: one panel on top (centred), 2x2 grid below
+# Layout: a row of three (a, b, c) above a centred row of two (d, e). Wider
+# than tall so that the figure, its caption and some text share a page.
 PANEL_IN = 1.9
 GAPX_IN, GAPY_IN = 0.45, 0.55
-W_IN = 2 * PANEL_IN + GAPX_IN + 0.2
-H_IN = 3 * PANEL_IN + 2 * GAPY_IN + 0.3
+W_IN = 3 * PANEL_IN + 2 * GAPX_IN + 0.2
+H_IN = 2 * PANEL_IN + GAPY_IN + 0.3
 fig = plt.figure(figsize=(W_IN, H_IN))
 PW, PH = PANEL_IN / W_IN, PANEL_IN / H_IN
 GAPX, GAPY = GAPX_IN / W_IN, GAPY_IN / H_IN
 
-x_left = 0.5 - PW - GAPX / 2
-x_right = 0.5 + GAPX / 2
+x_mid = 0.5 - PW / 2                                   # centre column
+x_left3, x_right3 = x_mid - GAPX - PW, x_mid + GAPX + PW   # outer columns, row of three
+x_left2, x_right2 = 0.5 - PW - GAPX / 2, 0.5 + GAPX / 2    # row of two, centred
 y_top = 1 - 0.08 / H_IN - PH
-y_mid = y_top - GAPY - PH
-y_bot = y_mid - GAPY - PH
+y_bot = y_top - GAPY - PH
 
-ax_a = fig.add_axes([0.5 - PW / 2, y_top, PW, PH])
-ax_b = fig.add_axes([x_left, y_mid, PW, PH])
-ax_c = fig.add_axes([x_right, y_mid, PW, PH])
-ax_d = fig.add_axes([x_left, y_bot, PW, PH])
-ax_e = fig.add_axes([x_right, y_bot, PW, PH])
+ax_a = fig.add_axes([x_left3, y_top, PW, PH])
+ax_b = fig.add_axes([x_mid, y_top, PW, PH])
+ax_c = fig.add_axes([x_right3, y_top, PW, PH])
+ax_d = fig.add_axes([x_left2, y_bot, PW, PH])
+ax_e = fig.add_axes([x_right2, y_bot, PW, PH])
 
 draw_panel(ax_a, "a", (-2.2, -1.8), annotate=True, ok=True, verdict="Good")
 draw_panel(ax_b, "b", (-5.5, 0.0), verdict="Arrows too stiff\nor button too firm")
