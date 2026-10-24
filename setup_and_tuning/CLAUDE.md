@@ -127,27 +127,39 @@ one it must change in all three.
 ## State of the document
 
 The `.tex` file is the author's draft. As of 24 Oct 2026 the figures are
-finished and placed, and Section 2 follows the setup procedure:
+finished and placed, every section has prose, and Section 2 follows the
+setup procedure:
 
 1. Limb alignment, 2. Draw weight, 3. Tiller, 4. Bracing height, 5. Arrows,
 6. Arrow rest, 7. Nocking point, 8. Centreshot, 9. Pressure button tension.
 
 Arrows come straight after bracing height because everything from there on
 depends on the shaft diameter; the rest comes before the nocking point
-because the nocking point is measured from the rest. Draw weight, pressure
-button tension, the clicker sentence under Arrows and the clicker check in
-Maintenance were drafted by Claude on 24 Oct 2026 and await the author's
-edit. Things known to need doing in the `.tex`:
+because the nocking point is measured from the rest. Section 4 has six
+numbered subsections (sight marks, clicker, string waxing, string check,
+screws and bolts, arrows) and an unnumbered Setup record sheet closes the
+document on its own page.
 
-* Section 1.3 (Reading list) is empty.
-* Section 4 (Maintenance) has three short topics (sight marks, clicker,
-  string waxing), all prose; the author may want more.
+Passages drafted by Claude on 24 Oct 2026 that await the author's rework:
+the Section 2, 3 and 4 lead-in paragraphs; Draw weight; the arrow rest
+procedure paragraph; the arrow length / nock fit paragraph and the clicker
+paragraph under Arrows; Pressure button tension; Checking your clicker,
+Checking your string, Checking screws and bolts, Checking your arrows; the
+Licence section; the Setup record sheet. Everything else is the author's.
+
+Technical notes:
+
 * `graphicx` is loaded with `\graphicspath{{figures/}}`, so figures are
   included as `\includegraphics[width=...]{<name>.pdf}`; labels are
   `fig:rest-position`, `fig:limb-alignment`, `fig:tiller`,
   `fig:bracing-height`, `fig:nocking-point`, `fig:centreshot`,
-  `fig:bare-shaft`, `fig:walkback`. The Tuning section carries
-  `\label{sec:tuning}`.
+  `fig:bare-shaft`, `fig:walkback`.
+* Section labels: `sec:when` (1.2), `sec:setup`, `sec:tuning`,
+  `sec:maintenance`. Never cite a section by a literal number.
+* Header date is the literal "Autumn 2026"; `\hypersetup` carries title,
+  author, subject and keywords (the licence is named in the keywords).
+* Inches are written `66\,in`; a thin space before every unit.
+* Headings are sentence case.
 
 ## Conventions used in the text
 
@@ -163,3 +175,7 @@ edit. Things known to need doing in the `.tex`:
   group (RH).
 * Walk-back adjusts button *tension*: drift left = stiff = soften; drift
   right = weak = stiffen (RH).
+* Arrow length: point roughly a thumb's width in front of the rest at full
+  draw, more with a clicker. Nock fit: clicks on, holds the arrow's weight,
+  drops off with a tap on the string.
+* Button for setup: medium spring, middle of its range.
