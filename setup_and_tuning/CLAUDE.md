@@ -110,13 +110,13 @@ is deliberately no shared module, so each script is self-contained):
 
 | Figure | Script | Section | Shows |
 |---|---|---|---|
-| `rest_position` | `rest_position.py` | 2.6 Arrow rest | Cross-section down the shaft (riser on the right, archer's view). (a) correct: plunger on the shaft centre, rest arm tip 3/4 of the way from centreline to outer edge; (b) arm too far out; (c) too far in; (d) rest too high; (e) too low. Top panel + 2x2 grid. Dashed plunger axis and dotted shaft centreline/outer edge on all panels. |
+| `rest_position` | `rest_position.py` | 2.6 Arrow rest | Cross-section down the shaft (riser on the right, archer's view). (a) correct: plunger on the shaft centre, rest arm tip 3/4 of the way from centreline to outer edge; (b) arm too far out; (c) too far in; (d) rest too high; (e) too low. Row of three over a centred row of two. Dashed plunger axis and dotted shaft centreline/outer edge on all panels. |
 | `limb_alignment` | `limb_alignment.py` | 2.1 Limb alignment | From behind the bow, riser face-on with sight window, limb bolts and stabiliser bushing; string tip-to-tip; dashed limb centrelines. (a) upper limb out; (b) correct; (c) both limbs out the same way. Widths exaggerated x2 as well as the offsets. |
 | `tiller` | `tiller.py` | 2.3 Tiller | Side profile, string on the right. D_top and D_bottom dimensioned from pocket edge to string; T = D_top - D_bottom under the strip. (a) T<0; (b) 0<=T<=6 mm; (c) T>6 mm. |
 | `bracing_height` | `bracing_height.py` | 2.4 Bracing height | Same bow as tiller, symmetric. Button end-on; B dimensioned button-to-string; nocking points; BH gauge on (b). (a) too low; (b) in range; (c) too high. |
 | `nocking_point` | `nocking_point.py` | 2.7 Nocking point | Side view cropped to the sight window; arrow nocked on the rest; dashed "square" line through the top of the rest arm; h_N dimensioned to the underside of the nock. (a) too low; (b) in range; (c) too high. |
 | `centreshot` | `centreshot.py` | 2.8 Centreshot | From behind, slightly above; string vertical; shaft as a tapering wedge; plunger visible. (a) too far out; (b) correct (3/4 of the point visible left of the string); (c) too far in. |
-| `bare_shaft` | `bare_shaft.py` | 3.1 Bare shaft | Target face, arrows nock-end-on. (a) good: bare shafts slightly low-left of fletched; (b) bare left: arrows too stiff or button too firm; (c) bare right: weak / soft; (d) bare low: nocking point too high; (e) bare high: nocking point too low. Top panel + 2x2 grid. |
+| `bare_shaft` | `bare_shaft.py` | 3.1 Bare shaft | Target face, arrows nock-end-on. (a) good: bare shafts slightly low-left of fletched; (b) bare left: arrows too stiff or button too firm; (c) bare right: weak / soft; (d) bare low: nocking point too high; (e) bare high: nocking point too low. Row of three over a centred row of two. |
 | `walkback` | `walkback.py` | 3.2 Walk-back | Tall target face, aiming mark near the top, plumb line; one arrow per distance (10-30 m in 5 m steps, then 40 m) walking down. (a) drifting left: slightly stiff, soften button; (b) straight; (c) drifting right: slightly weak, stiffen button. Button *tension* only; centreshot is not touched here. |
 
 The three side-profile figures (`tiller`, `bracing_height`, `nocking_point`)
@@ -162,7 +162,16 @@ Technical notes:
 * Headings are sentence case.
 * `placeins` puts a float barrier at every section and subsection (the
   `\subsection` macro is patched in the preamble), so figures stay in
-  their subsection. Do not add explicit `\FloatBarrier`s.
+  their subsection. Do not add explicit `\FloatBarrier`s. `topfraction`
+  and `floatpagefraction` are raised so a tall figure shares a page with
+  text. Figure widths are chosen per figure (0.6 to 1.0 of the line
+  width) so figure, caption and some text fit on one page; the two
+  five-panel figures are laid out 3+2 for the same reason. Where a
+  figure would otherwise be pushed to the next page, its environment
+  sits directly after the subsection heading, before the text.
+* The definitions in 1.1 are an `enumitem` description list with italic
+  labels; itemize labels overhung the margin.
+* Footer: licence line left, page number right.
 
 ## Conventions used in the text
 
