@@ -1,0 +1,11 @@
+This repository is dual licensed.
+
+The handouts (the LaTeX sources and the generated figures in each guide's
+figures/ directory) are licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0). See
+LICENSE-CC-BY-SA or https://creativecommons.org/licenses/by-sa/4.0/.
+
+The Python scripts in each guide's python_scripts/ directory are licensed
+under the MIT License. See LICENSE-MIT.
+
+Copyright (c) 2026 Christopher Woodgate

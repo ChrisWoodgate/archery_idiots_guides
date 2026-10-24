@@ -31,3 +31,10 @@ python3 python_scripts/tiller.py
 ```
 
 Requires Python 3 with numpy and matplotlib.
+
+## Licence
+
+The handouts, including their figures, are licensed under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The Python
+scripts that draw the figures are licensed under the MIT License. See
+`LICENSE` for details.
