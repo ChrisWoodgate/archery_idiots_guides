@@ -168,9 +168,11 @@ Technical notes:
   sits directly after the subsection heading, before the text.
 * The definitions in 1.1 are an `enumitem` description list with italic
   labels; itemize labels overhung the margin.
-* Footer: licence line left, page number right.
+* Footer: page number bottom right only. The copyright and licence
+  appear once, as an unmarked footnote on page 1, and in full in the
+  Licence section at the end.
 * The author's name is "Christopher D. Woodgate" everywhere it appears
-  (header, PDF metadata, footer, Licence).
+  (header, PDF metadata, page-1 footnote, Licence).
 
 ## Conventions used in the text
 
