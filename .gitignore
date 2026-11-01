@@ -13,5 +13,8 @@
 # Python
 __pycache__/
 
-# Built handouts
-setup_and_tuning/setup_and_tuning.pdf
+# Built handouts: <guide>/<guide>.pdf (figure PDFs live in figures/ and stay tracked)
+/*/*.pdf
+
+# macOS
+.DS_Store
