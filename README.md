@@ -8,15 +8,22 @@ Christopher Woodgate to accompany hands-on workshops at Cleve Archers.
 | Directory | Guide |
 |---|---|
 | `setup_and_tuning/` | *The Idiot's Guide to Recurve Bow Setup, Tuning, and Maintenance* (Autumn 2026) |
+| `fletching/` | *The Idiot's Guide to Fletching*: fletching aluminium or carbon arrows with plastic vanes and glue (older guide) |
+| `maintenance/` | *The Idiot's Guide to Recurve Bow Maintenance*: a short checklist (older draft) |
 
-Each guide is a single LaTeX file with its figures in `figures/` and the
-scripts that draw them in `python_scripts/`.
+Each guide is a single LaTeX file named after its directory. The two older
+guides are kept for the record; the maintenance draft overlaps with the
+setup and tuning guide.
+Only `setup_and_tuning/` has figures, in `figures/`, with the scripts that
+draw them in `python_scripts/`.
 
 ## Building
 
-From inside a guide's directory:
+From inside a guide's directory, run pdflatex twice on its file, for
+example:
 
 ```sh
+cd setup_and_tuning
 pdflatex setup_and_tuning.tex
 pdflatex setup_and_tuning.tex
 ```
@@ -27,7 +34,7 @@ Figures are generated, never hand-edited. Each script writes a PDF (used by
 the document), an SVG and a PNG preview to `../figures/`:
 
 ```sh
-python3 python_scripts/tiller.py
+python3 setup_and_tuning/python_scripts/tiller.py
 ```
 
 Requires Python 3 with numpy and matplotlib.
