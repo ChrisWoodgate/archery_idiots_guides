@@ -29,6 +29,10 @@
 \rhead{Autumn 2026}
 \lhead{Christopher D. Woodgate}
 \fancyfoot[R]{\thepage}
+% Unmarked footnote with no indent, flush with the footnote rule.
+\makeatletter
+\newcommand{\plainfootnote}[1]{{\renewcommand{\@makefntext}[1]{\noindent ##1}\footnotetext{#1}}}
+\makeatother
 
 \begin{document}
 
@@ -36,7 +40,7 @@
 	\huge{\textbf{The Idiot's Guide to Recurve Bow Setup, Tuning, and Maintenance}}
 \end{center}
 % Unmarked footnote on page 1 only; full terms in the Licence section.
-{\renewcommand{\thefootnote}{}\footnotetext{\copyright{} 2026 Christopher D. Woodgate. Licensed under CC BY-SA 4.0. See the Licence section at the end.}}
+\plainfootnote{\copyright{} 2026 Christopher D. Woodgate. Licensed under CC BY-SA 4.0. See the Licence section at the end.}
 
 
 \section{Introduction}
