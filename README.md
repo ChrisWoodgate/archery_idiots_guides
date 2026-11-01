@@ -11,6 +11,18 @@ Christopher Woodgate to accompany hands-on workshops at Cleve Archers.
 | `fletching/` | *The Idiot's Guide to Fletching*: fletching aluminium or carbon arrows with plastic vanes and glue (older guide) |
 | `maintenance/` | *The Idiot's Guide to Recurve Bow Maintenance*: a short checklist (older draft) |
 
+## Download
+
+Ready-to-print PDFs are attached to the repository's
+[releases](https://github.com/ChrisWoodgate/archery_idiots_guides/releases),
+so there is no need to build them yourself.
+
+* *The Idiot's Guide to Recurve Bow Setup, Tuning, and Maintenance*:
+  [v1.0 PDF](https://github.com/ChrisWoodgate/archery_idiots_guides/releases/download/setup-and-tuning-v1.0/idiots-guide-setup-and-tuning-v1.0.pdf)
+
+A release is a snapshot; the source in this repository may have moved on
+since.
+
 Each guide is a single LaTeX file named after its directory. The two older
 guides are kept for the record; the maintenance draft overlaps with the
 setup and tuning guide.
