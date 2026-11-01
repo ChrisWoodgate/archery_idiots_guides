@@ -90,6 +90,39 @@ After the import, the same rule applies to later work: one logical change
 per commit, script and regenerated outputs in separate commits, message
 body states why.
 
+## Releases
+
+The PDF is never committed. Readers download it from a GitHub release, and
+the README's Download section links to it. Releases are deliberate
+snapshots, made only when the author asks; small edits do not get one.
+
+Tags are per guide: `setup-and-tuning-vX.Y` (other guides use their own
+directory name as the prefix, e.g. `fletching-v1.0`). v1.0 was released on
+1 Nov 2026 from commit 229f437.
+
+To cut a release (publishing is outward-facing: confirm with the author
+first):
+
+1. Check the tree is clean and `main` matches `origin/main`, and that
+   `gh auth status` is logged in.
+2. Build from a clean export of the commit being released, not the
+   working folder, in the scratchpad:
+   `git archive <commit> setup_and_tuning | tar -x -C <dir>`, then run
+   pdflatex twice in `<dir>/setup_and_tuning` and check the log for errors,
+   undefined references and overfull boxes.
+3. Name the PDF `idiots-guide-setup-and-tuning-vX.Y.pdf`.
+4. Create an annotated tag on that commit and push it:
+   `git tag -a setup-and-tuning-vX.Y -m "<full title>, vX.Y (<term>)" <commit>`
+   then `git push origin setup-and-tuning-vX.Y`.
+5. `gh release create setup-and-tuning-vX.Y <pdf> --verify-tag
+   --title "Setup and tuning guide vX.Y" --notes-file <notes>`. Notes: one
+   paragraph on what the handout covers and what changed since the last
+   release, plus the licence line.
+6. Check the asset downloads (`curl -sSL -o /dev/null -w "%{http_code}"
+   <asset url>` should give 200).
+7. Update the README Download link to the new asset URL, commit and push.
+   Previous releases stay up; do not delete them.
+
 ## Figures
 
 All figures share a house style, defined independently in each script (there
