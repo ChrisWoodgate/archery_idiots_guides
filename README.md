@@ -42,6 +42,8 @@ Requires Python 3 with numpy and matplotlib.
 ## Licence
 
 The handouts, including their figures, are licensed under
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The Python
-scripts that draw the figures are licensed under the MIT License. See
-`LICENSE` for details.
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The LaTeX
+source for each handout, its figures, and the Python scripts that draw them
+are all in this repository. The LaTeX source and figures are under the same
+CC BY-SA 4.0 licence as the handouts; the scripts are licensed under the MIT
+License. See `LICENSE` for details.
